@@ -1,10 +1,6 @@
 package com.webApp.HRdatabase.data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.GeneratedValue;
+import javax.persistence.*;
 
 @Entity
 public class Employee {
@@ -14,8 +10,7 @@ public class Employee {
     private Long id;
     private String firstName;
     private String lastName;
-    @ManyToOne
-    @JoinColumn(name = "department_department_id")
+    @Transient
     private String department;
     private String email;
     private String phoneNumber;
